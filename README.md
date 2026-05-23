@@ -68,10 +68,10 @@ Key observations documented:
 - Modulo (`%`) in epoch logic and positional encoding patterns
 - Dynamic typing implications for production ML code
 
-### `02_functions_and_scope` *(in progress)*
+### `02_functions_and_scope` 
 Functions as the primary unit of abstraction in ML pipelines. Covers parameter design, scope rules, and writing functions that are easy to test and compose.
 
-### `03_data_structures` *(upcoming)*
+### `03_data_structures` *(in progress)*
 Python's built-in structures mapped to their ML equivalents — lists as feature vectors, dicts as configuration objects, sets for vocabulary deduplication.
 
 ### `04_control_flow` *(upcoming)*
@@ -135,7 +135,7 @@ Version      Git with conventional commit messages
 
 **GitHub** — (https://github.com/nasirailaai/)  
 **LinkedIn** — (https://www.linkedin.com/in/aila-nasir/)  
-**Kaggle** — (kaggle.com/code/ailanasirai/ex1-syntax-variables-complete)
+**Kaggle** — (https://www.kaggle.com/ailanasirai/code)
 
 ---
 
