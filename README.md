@@ -133,9 +133,9 @@ Version      Git with conventional commit messages
 
 ## Contact
 
-**GitHub** — [github.com/yourusername](https://github.com/yourusername)  
-**LinkedIn** — [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)  
-**Kaggle** — [kaggle.com/yourusername](https://kaggle.com/yourusername)
+**GitHub** — [github.com/yourusername](https://github.com/nasirailaai/)  
+**LinkedIn** — [linkedin.com/in/yourprofile](https://www.linkedin.com/in/aila-nasir/)  
+**Kaggle** — [kaggle.com/yourusername](kaggle.com/code/ailanasirai/ex1-syntax-variables-complete )
 
 ---
 
