@@ -8,7 +8,7 @@
 
 This repository documents my progression through ML engineering fundamentals. It is not a tutorial mirror or a collection of copied exercises. Every file here is written from scratch, with the goal of understanding *why* things work — not just *that* they work.
 
-The structure follows a deliberate learning architecture: syntax → data structures → control flow → functions → then into ML-specific tooling (NumPy, pandas, scikit-learn). Each module builds on the last.
+The structure follows a deliberate learning architecture: syntax → functions → data structures → control flow → then into ML-specific tooling (NumPy, pandas, scikit-learn). Each module builds on the last.
 
 ---
 
@@ -18,80 +18,70 @@ The structure follows a deliberate learning architecture: syntax → data struct
 ml-engineering-core/
 │
 ├── 01_python_syntax/
-│   ├── notes.md                    # Conceptual notes on Python primitives
-│   ├── arithmetic_operators.py     # Operator behavior, precedence, type implications
-│   └── variable_types.py           # Dynamic typing, type inspection, ML-relevant naming
+│   └── arithmetic_and_variables.py  # Operators, types, ML-relevant naming
 │
 ├── 02_functions_and_scope/
-│   ├── notes.md
-│   ├── function_design.py          # Parameters, return values, default args
-│   └── scope_and_closures.py       # LEGB rule, closures, practical examples
+│   └── functions_core.py            # Docstrings, default args, bug fixes, ML context
 │
-├── 03_data_structures/
-│   ├── notes.md
-│   ├── lists_and_indexing.py       # Slicing, mutation, list comprehensions
-│   ├── dicts_and_sets.py           # Key-value patterns common in ML configs
-│   └── tuples_and_immutability.py
+├── 03_data_structures/              # upcoming
 │
-├── 04_control_flow/
-│   ├── notes.md
-│   ├── conditionals.py
-│   └── loops_and_iteration.py      # for/while patterns, enumerate, zip
+├── 04_control_flow/                 # upcoming
 │
-├── 05_numpy_foundations/
-│   ├── notes.md
-│   ├── array_operations.py         # Broadcasting, vectorization, axis logic
-│   └── linear_algebra_basics.py    # Dot products, matrix ops, shapes
+├── 05_numpy_foundations/            # upcoming
 │
-├── 06_pandas_core/
-│   ├── notes.md
-│   ├── dataframe_operations.py
-│   └── data_cleaning_patterns.py
+├── 06_pandas_core/                  # upcoming
 │
 ├── kaggle_notebooks/
-│   ├── hello_python_extended.ipynb
-│   └── README.md                   # Index of notebooks and what each covers
+│   ├── ex1-syntax-variables-complete.ipynb
+│   └── ex2-functions-getting-help.ipynb
 │
 └── assets/
-    └── diagrams/                   # Architecture sketches, concept maps
+    └── diagrams/
 ```
 
 ---
 
 ## Modules
 
-### `01_python_syntax`
-Core Python syntax studied through the lens of ML engineering. Covers arithmetic operators, type behavior, and variable assignment — with a focus on how these primitives appear inside real training loops and data pipelines.
+### `01_python_syntax` — Complete
+Core Python syntax through an ML engineering lens. Covers arithmetic operators, type behavior, and variable assignment — with focus on how these primitives appear inside real training loops and data pipelines.
 
-Key observations documented:
+Key concepts documented:
 - Floor division (`//`) vs true division (`/`) — critical for batch index computation
 - Modulo (`%`) in epoch logic and positional encoding patterns
 - Dynamic typing implications for production ML code
 
-### `02_functions_and_scope` 
-Functions as the primary unit of abstraction in ML pipelines. Covers parameter design, scope rules, and writing functions that are easy to test and compose.
+### `02_functions_and_scope` — Complete
+Functions as the primary unit of abstraction in ML pipelines. Covers docstrings, default arguments, error reading, and writing functions that are easy to test and compose.
 
-### `03_data_structures` *(in progress)*
+Key concepts documented:
+- `round()` with negative `ndigits` — rounding large numerical values
+- Default parameters — optional arguments with sensible fallbacks
+- Bug pattern recognition — typos, scope errors, indentation issues
+- ML context — `normalize()` and `batch_count()` as pipeline functions
+
+### `03_data_structures` — In Progress
 Python's built-in structures mapped to their ML equivalents — lists as feature vectors, dicts as configuration objects, sets for vocabulary deduplication.
 
-### `04_control_flow` *(upcoming)*
+### `04_control_flow` — Upcoming
 Loops, conditionals, and iteration patterns that appear repeatedly in training loops, data loaders, and preprocessing pipelines.
 
-### `05_numpy_foundations` *(upcoming)*
-The numerical backbone of ML. Vectorization, broadcasting, axis operations, and linear algebra implemented from first principles before reaching for higher-level libraries.
+### `05_numpy_foundations` — Upcoming
+The numerical backbone of ML. Vectorization, broadcasting, axis operations, and linear algebra from first principles.
 
-### `06_pandas_core` *(upcoming)*
+### `06_pandas_core` — Upcoming
 Tabular data manipulation: loading, cleaning, transforming, and preparing datasets for model input.
 
 ---
 
 ## Kaggle Notebooks
 
-| Notebook | Course | Topics | Status |
+| Notebook | Module | Topics | Status |
 |---|---|---|---|
-| `hello_python_extended.ipynb` | Kaggle — Python | Arithmetic, types, variables, f-strings | Complete |
+| `ex1-syntax-variables-complete.ipynb` | 01 — Python Syntax | Arithmetic, types, variables, modulo logic | Complete |
+| `ex2-functions-getting-help.ipynb` | 02 — Functions | Docstrings, default args, round(), bug fixes | Complete |
 
-Notebooks in this repository are extended versions of course material — not submissions. Each adds additional experiments, hypothesis testing, and engineering context beyond the original exercises.
+Notebooks here are exercise completions with added engineering context — hypothesis comments, ML-relevant examples, and documented reasoning beyond the original prompts.
 
 ---
 
@@ -100,8 +90,6 @@ Notebooks in this repository are extended versions of course material — not su
 **Hypothesis before execution.** Every code cell includes a comment predicting the output before running. This builds the ability to read code, not just run it.
 
 **ML-relevant naming from day one.** Variables are named after real ML concepts (`learning_rate`, `batch_size`, `num_epochs`) rather than placeholder names (`x`, `a`, `val`). This builds vocabulary while building syntax.
-
-**Notes over comments.** Each module has a `notes.md` that explains the *why* behind behavior — not a line-by-line description of what the code does.
 
 **Structured before committed.** Files are organized before being pushed. No flat dumps of loose scripts.
 
@@ -121,7 +109,7 @@ Version      Git with conventional commit messages
 ## Roadmap
 
 - [x] Python syntax fundamentals
-- [ ] Functions and scope
+- [x] Functions and scope
 - [ ] Data structures
 - [ ] Control flow
 - [ ] NumPy — arrays and vectorized operations
@@ -133,9 +121,9 @@ Version      Git with conventional commit messages
 
 ## Contact
 
-**GitHub** — (https://github.com/nasirailaai/)  
-**LinkedIn** — (https://www.linkedin.com/in/aila-nasir/)  
-**Kaggle** — (https://www.kaggle.com/ailanasirai/code)
+**GitHub** — [github.com/ailanasirai](https://github.com/ailanasirai)
+**LinkedIn** — [linkedin.com/in/aila-nasir](https://www.linkedin.com/in/aila-nasir/)
+**Kaggle** — [kaggle.com/ailanasirai](https://www.kaggle.com/ailanasirai/code)
 
 ---
 
